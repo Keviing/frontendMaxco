@@ -1,7 +1,8 @@
 import axios from "axios";
 
-const url = 'http://localhost:5121/api/Cliente'
-export const getAllClientes = async () => {
+
+
+export async function getAllClientes (url) {
 const response = await axios.get(url)
 console.log(response.data)
 return response.data
