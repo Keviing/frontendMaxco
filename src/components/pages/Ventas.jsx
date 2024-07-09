@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect}  from "react";
-import { getAllClientes } from "../../api/httpRequest";
+import { getAllData } from "../../api/httpRequest";
 import DataTable from "react-data-table-component";
 
 
@@ -9,7 +9,7 @@ function Ventas(){
     const [venta, setVenta] = useState([]);
     useEffect(() => {
         const getVentaDataRequest = async () => {
-            const ventaData = await getAllClientes('http://localhost:5121/api/Venta')
+            const ventaData = await getAllData('http://localhost:5121/api/Venta')
         setVenta(ventaData)
         }
         getVentaDataRequest()
@@ -22,11 +22,12 @@ function Ventas(){
         { name: 'Télefono', selector: row => row.cliente.telefono, sortable: true },
         { name: 'Vendedor', selector: row => row.vendedor.nombre, sortable: true },
         { name: 'Zona', selector: row => row.zona.nombreZona, sortable: true },
+        { name: 'Fecha', selector: row => row.fecha, sortable: true },
       ];
 
     return (
         <>
-        <h1 className="text-center my-4">Lista de clientes</h1>
+        <h1 className="text-center my-4">Lista de Ventas</h1>
         <div className="container">
         <div className="row justify-content-center">
         <div className="col-12">

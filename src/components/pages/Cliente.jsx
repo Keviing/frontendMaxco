@@ -1,6 +1,6 @@
 import React  from "react";
 import { useEffect, useState } from "react";
-import { getAllClientes } from "../../api/httpRequest";
+import { getAllData } from "../../api/httpRequest";
 import DataTable from "react-data-table-component";
 
 function Cliente () {
@@ -8,7 +8,7 @@ function Cliente () {
     const [cliente, setcliente] = useState([]);
     useEffect (() => {
         const getClienteDataRequest = async () => {
-            const clienteData = await getAllClientes('http://localhost:5121/api/Cliente')
+            const clienteData = await getAllData('http://localhost:5121/api/Cliente')
             setcliente(clienteData)
         }
         getClienteDataRequest()

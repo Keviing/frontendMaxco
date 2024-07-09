@@ -1,6 +1,6 @@
 import React from "react";
 import { useState , useEffect } from "react";
-import { getAllClientes } from "../../api/httpRequest";
+import { getAllData } from "../../api/httpRequest";
 import DataTable from "react-data-table-component";
 
 function Inicio() {
@@ -8,7 +8,7 @@ function Inicio() {
     const [report, setReport] = useState([]);
     useEffect (() => {
         const getReportDataRequest = async () => {
-            const reportData = await getAllClientes('http://localhost:5121/api/Report/zonaVentaMayor')
+            const reportData = await getAllData('http://localhost:5121/api/Report/zonaVentaMayor')
             setReport(reportData)
         }
         getReportDataRequest()
