@@ -22,6 +22,7 @@ const Navbar = () => {
             <Link className="nav-link " to='/inicio'>Inicio</Link>
             <Link className="nav-link" to='/cliente' >Cliente</Link>
             <Link className="nav-link" to='/ventas' >Ventas</Link>
+            <Link className="nav-link" to='/zonaventa' >Zona Venta</Link>
           </div>
         </div>
       </div>
