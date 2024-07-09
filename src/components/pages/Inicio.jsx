@@ -21,7 +21,7 @@ function Inicio() {
     ]
     return(
         <>
-        <h1 className="text-center my-4 ">Reporte de Ventas</h1>
+        <h1 className="text-center my-4 ">Ventas totales por zona y vendedor</h1>
         <div className="container">
         <div className="row justify-content-center">
         <div className="col-12">
