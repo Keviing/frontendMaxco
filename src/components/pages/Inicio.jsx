@@ -8,7 +8,7 @@ function Inicio() {
     const [report, setReport] = useState([]);
     useEffect (() => {
         const getReportDataRequest = async () => {
-            const reportData = await getAllClientes('http://localhost:5121/api/Report/zonas-mayor-venta-por-vendedor')
+            const reportData = await getAllClientes('http://localhost:5121/api/Report/zonaVentaMayor')
             setReport(reportData)
         }
         getReportDataRequest()
